@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="RockPaper.css" />
+    <script src="RockPaper.js"></script>
+  </head>
+  <body>
+    <section id="main">
+      <h1>ROCK,PAPER,SCISSORS</h1>
+      <label>Enter No of Sets to Play</label>
+      <input
+        type="text"
+        id="sets"
+        size="5"
+        autofocus
+      />
+      <button id="submitButton" onclick="setsFunction()">Submit</button>
+      <div id="error"></div>
+    </section>
+
+    <section id="aboutsets">
+      <h1>Number Of Sets Entered By You <span id="spanaboutsets"></span></h1>
+      <h4>
+        Sets Won By You: <span id="uset">0</span> | Sets Won By Computer:
+        <span id="cset">0</span>
+      </h4>
+    </section>
+
+    <section id="inbox">
+      <h1>ROCK,PAPER,SCISSORS</h1>
+      <h2>The First player to get 5 points wins the game</h2>
+      <h2>
+        Your Score:<span id="yscore">0</span>|Computer Score:<span id="cscore"
+          >0</span
+        >
+      </h2>
+      <span id="dispbuttons">
+        <button type="button" onclick="rock()">ROCK</button>
+        <button type="button" onclick="paper()">PAPER</button>
+        <button type="button" onclick="scissor()">SCISSOR</button>
+      </span>
+      <span id="newbuttons" style="display: none"
+        ><button type="button" onclick="newGame()">RESTART GAME</button></span
+      >
+      <span id="newsetbuttons" style="display: none"
+        ><button
+          type="button"
+          onclick="nextSet('playercontainer', 'computercontainer')"
+        >
+          NEXTSET
+        </button></span
+      >
+      <!--
+      <h2>
+        Your Choice:<span id="ychoice"></span>|Computer Choice:<span
+          id="cchoice"
+        ></span>
+      </h2>-->
+      <h2><span id="ychoice"></span><span id="cchoice"></span></h2>
+      <h2 id="change">Click one of the buttons to begin the game!</h2>
+    </section>
+
+    <div id="displayscore">
+      <h1>
+        <span id="playerdisplay">Players Set History</span> |<span
+          id="computerdisplay"
+        >
+          Computers Set History</span
+        >
+      </h1>
+      <span id="playercontainer"></span>
+      <span id="computercontainer"></span>
+    </div>
+  </body>
+</html>
